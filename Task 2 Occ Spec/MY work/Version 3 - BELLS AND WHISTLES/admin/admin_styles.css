@@ -1,0 +1,70 @@
+/* Global Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { color: #fff; line-height: 1.6; background-color: #1e272e; }
+a { color: #2ecc71; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+header { background-color: #2ecc71; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; }
+.logo { font-size: 1.5rem; font-weight: bold; color: #000; }
+.header-buttons { display: flex; gap: 20px; }
+.register-btn, .login-btn, .nav-btn { background-color: rgba(255, 255, 255, 0.8); border: none; padding: 8px 25px;
+    border-radius: 20px; color: #333; font-weight: bold; cursor: pointer; transition: all 0.3s ease; }
+.register-btn:hover, .login-btn:hover, .nav-btn:hover { background-color: #fff; }
+.company-logo { width: 50px; height: 50px; }
+
+/* Main Content */
+#content, .content { background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; margin: 20px auto; max-width: 800px; }
+#title, #banner, h3, h4 { margin-bottom: 20px; font-size: 1.5rem; color: #2ecc71; text-align: center; }
+p { margin-bottom: 15px; }
+
+/* Navigation Menu */
+.admin-nav { background-color: #1a232b; padding: 15px; display: flex; justify-content: center; gap: 20px; }
+.admin-nav a { color: #fff; padding: 8px 15px; border-radius: 5px; transition: all 0.3s ease; }
+.admin-nav a:hover { background-color: #2ecc71; color: #1a232b; text-decoration: none; }
+.admin-nav .active { background-color: #2ecc71; color: #1a232b; }
+
+/* Form Styling */
+form { width: 100%; max-width: 400px; margin: 0 auto; }
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%; padding: 12px; background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 5px; color: #fff; font-size: 1rem;
+    margin-bottom: 15px; }
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+    outline: none; border-color: #2ecc71; background-color: rgba(255, 255, 255, 0.2); }
+label { display: block; margin-bottom: 8px; color: #2ecc71; }
+input[type="submit"] { background-color: #2ecc71; color: #fff; border: none; padding: 12px 25px;
+    border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease; width: 100%; }
+input[type="submit"]:hover { background-color: #27ae60; }
+select { appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232ecc71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 10px center; padding-right: 30px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+th { background-color: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+tr:hover { background-color: rgba(255, 255, 255, 0.05); }
+
+/* Error/Success Messages */
+.error-message { background-color: rgba(231, 76, 60, 0.3); border-left: 4px solid #e74c3c;
+    padding: 10px 15px; margin-bottom: 20px; border-radius: 0 5px 5px 0; }
+.success-message { background-color: rgba(46, 204, 113, 0.3); border-left: 4px solid #2ecc71;
+    padding: 10px 15px; margin-bottom: 20px; border-radius: 0 5px 5px 0; }
+
+/* Dashboard Cards */
+.dashboard-stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+.stat-card { background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 15px;
+    flex: 1; min-width: 200px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); }
+.stat-number { font-size: 2.5rem; font-weight: bold; color: #2ecc71; margin: 10px 0; }
+.stat-label { color: #ddd; font-size: 0.9rem; }
+
+/* Container */
+#container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .admin-nav { flex-wrap: wrap; }
+    .dashboard-stats { flex-direction: column; }
+    .stat-card { min-width: 100%; }
+    form { max-width: 100%; }
+}
